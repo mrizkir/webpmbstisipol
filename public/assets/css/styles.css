@@ -1,0 +1,17 @@
+.btn-primary {
+  background: var(--accent-color);
+  color: var(--contrast-color);
+  padding: 16px 32px;
+  border-radius: 6px;
+  font-weight: 400;
+  font-size: 1rem;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+.btn-primary:hover {
+  background: color-mix(in srgb, var(--accent-color), black 10%);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px color-mix(in srgb, var(--accent-color), transparent 70%);
+}
