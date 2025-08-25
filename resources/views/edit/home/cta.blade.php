@@ -74,35 +74,26 @@
                                     @csrf
                                     <div class="row gy-4">
 
-                                        <div class="col-12">
-                                            <p>Edit CTA Title</p>
-                                            <input type="text" name="HomeCtaTitle" class="form-control"
-                                                placeholder="Penerimaan Mahasiswa Baru 2025/2026" required="">
-                                        </div>
+                    <div class="col-12">
+                      <p>Edit CTA Title</p>
+                      <input type="text" value="{{ $ctas[0]->content }}" name="HomeCtaTitle" class="form-control" placeholder="Penerimaan Mahasiswa Baru 2025/2026" required="">
+                    </div>
 
-                                        <div class="col-12 ">
-                                            <p>Edit Cta Description</p>
-                                            <input type="text" class="form-control" name="homeCtaDescription"
-                                                placeholder="STISIPOL Raja Haji Tanjungpinang telah membuka pendaftaran."
-                                                required="">
-                                        </div>
+                    <div class="col-12 ">
+                      <p>Edit Cta Description</p>
+                      <input type="text" value="{{ $ctas[1]->content }}" class="form-control" name="homeCtaDescription" placeholder="STISIPOL Raja Haji Tanjungpinang telah membuka pendaftaran." required="">
+                    </div>
 
-                                        <div class="col-12 "
-                                            style="position: relative; display: inline-block; width: 100%;">
-                                            <div class="d-flex justify-content-between align-items-center">
-                                                <p class="mt-3">Edit CTA list</p>
-                                                <button type="button" class="mb-2 btn btn-add">
-                                                    <i class="bi bi-plus-circle"></i>
-                                                </button>
-                                            </div>
-                                            <input type="text" class="form-control" name="homeCtaList"
-                                                placeholder="2200+" required="">
-                                        </div>
-                                        <div class="col-12 ">
-                                            <p>Edit Cta Image</p>
-                                            <input type="file" class="form-control" name="homeCtaImg"
-                                                placeholder="Alumni" required="">
-                                        </div>
+                    <div class="col-12 ">
+                      <p>Edit Cta Image</p>
+                      <input type="file" value="{{ $ctas[2]->content }}" class="form-control" name="homeCtaImg" placeholder="Alumni" required="">
+                    </div>
+                    @foreach ($ctalists as $ctalist)      
+                    <div class="col-12 ">
+                      <p>Edit Cta List</p>
+                      <input type="text" value="{{ $ctalist->content }}" class="form-control" name="homeCtaList" placeholder="2200+" required="">
+                    </div>
+                    @endforeach
 
                                         <div class="col-12 text-center">
                                             <div class="loading">Loading</div>

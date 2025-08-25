@@ -74,46 +74,32 @@
                                     @csrf
                                     <div class="row gy-4">
 
-                                        <div class="col-12">
-                                            <p>Edit Stats Main Heading</p>
-                                            <input type="text" name="HomeStatsMainHeading" class="form-control"
-                                                placeholder="Mari Bergabung" required="">
-                                        </div>
+                    <div class="col-12">
+                      <p>Edit Stats Main Heading</p>
+                      <input type="text" value="{{ $statelemens[0]->content }}" name="HomeStatsMainHeading" class="form-control" placeholder="Mari Bergabung" required="">
+                    </div>
 
-                                        <div class="col-12 ">
-                                            <p>Edit Stats Main Description</p>
-                                            <input type="text" class="form-control" name="homeHeroDescription"
-                                                placeholder="Mari bergabung dengan mahasiswa yang bangga berkuliah di br STISIPOL
-                            Raja Haji Tanjungpinang."
-                                                required="">
-                                        </div>
+                    <div class="col-12 ">
+                      <p>Edit Stats Main Description</p>
+                      <input type="text" value="{{ $statelemens[1]->content }}" class="form-control" name="homeHeroDescription" placeholder="Mari bergabung dengan mahasiswa yang bangga berkuliah di br STISIPOL
+                            Raja Haji Tanjungpinang." required="">
+                    </div>
+                    @foreach ( $stats as $stat)
+                      
+                    <div class="col-12 ">
+                      <p>Edit Stats Stat Number</p>
+                      <input type="text" value="{{ $stat->number }}" class="form-control" name="homeStatsStatNumber" placeholder="0000+" required="">
+                    </div>
+                    <div class="col-12 ">
+                      <input type="text" value="{{ $stat->label }}" class="form-control" name="homeStatsStatLabel" placeholder="label" required="">
+                    </div>
+                    @endforeach
 
-                                        <div class="col-12 ">
-                                            <p>Edit Stats Stat Number</p>
-                                            <input type="text" class="form-control" name="homeStatsStatNumber"
-                                                placeholder="2200+" required="">
-
-                                            <div class="d-flex justify-content-end mt-2">
-                                                <button type="button" class="btn btn-add">
-                                                    <i class="bi bi-plus-circle"></i> Tambah
-                                                </button>
-                                            </div>
-                                        </div>
-                                        <div class="col-12 ">
-                                            <input type="text" class="form-control" name="homeStatsStatLabel"
-                                                placeholder="Alumni" required="">
-
-                                            <div class="d-flex justify-content-end mt-2">
-                                                <button type="button" class="btn btn-add">
-                                                    <i class="bi bi-plus-circle"></i> Tambah
-                                                </button>
-                                            </div>
-                                        </div>
-
-                                        <div class="col-12 text-center">
-                                            <div class="loading">Loading</div>
-                                            <div class="error-message"></div>
-                                            <div class="sent-message">Your message has been sent. Thank you!</div>
+                    
+                    <div class="col-12 text-center">
+                      <div class="loading">Loading</div>
+                      <div class="error-message"></div>
+                      <div class="sent-message">Your message has been sent. Thank you!</div>
 
                                             <button type="submit" class="btn btn-submit w-100">Masuk</button>
                                         </div>
