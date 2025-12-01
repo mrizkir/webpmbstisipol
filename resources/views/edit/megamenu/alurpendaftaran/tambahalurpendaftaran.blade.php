@@ -90,9 +90,7 @@
                                                             name="tipe"> centang
                                                         jika anda ingin cardnya berwarna berbeda
                                                     </label>
-
                                                 </div>
-
                                             <button type="submit" class="btn btn-submit w-100">Simpan</button>
                                         </div>
                                     </div>

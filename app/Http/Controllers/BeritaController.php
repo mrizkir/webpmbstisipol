@@ -43,6 +43,7 @@ class BeritaController extends Controller
     public function editBeritaSelengkapnya()
     {
         $beritaUrl = Url::all();
+        
         $berita = Berita::all();
         return view('edit.berita.editberitaselengkapnya', compact('berita', 'beritaUrl'));
     }
@@ -50,7 +51,7 @@ class BeritaController extends Controller
     {
          $beritaUrl = Url::all();
         $berita = Berita::all();
-        return view('edit.berita.berita', compact('berita', 'beritaUrl'));
+        return view('edit.berita.formeditberitaselengkapnya', compact('berita', 'beritaUrl'));
     }
     public function showEditBeritaurl()
     {
@@ -61,7 +62,7 @@ class BeritaController extends Controller
     public function updateBerita(Request $request)
 {
     // update konten berita
-    if ($request->has('berita')) {
+    if ($request->has('beritas')) {
         $this->updateBeritaContent($request);
     }
 
@@ -70,7 +71,7 @@ class BeritaController extends Controller
 
 private function updateBeritaContent(Request $request)
 {
-    $beritas = $request->input('berita', []);
+    $beritas = $request->input('beritas', []);
 
     foreach ($beritas as $index => $berita) {
         if (isset($berita['id'])) {
@@ -83,8 +84,8 @@ private function updateBeritaContent(Request $request)
                 ];
 
                 // cek apakah ada file gambar baru
-                if ($request->hasFile("berita.$index.img")) {
-                    $file = $request->file("berita.$index.img");
+                if ($request->hasFile("beritas.$index.img")) {
+                    $file = $request->file("beritas.$index.img");
                     $filename = time() . '_' . $file->getClientOriginalName();
                     $file->move(public_path('assets/img/berita'), $filename);
 
@@ -105,8 +106,8 @@ private function updateBeritaContent(Request $request)
                 'isi'   => $berita['isi'],
             ];
 
-            if ($request->hasFile("berita.$index.img")) {
-                $file = $request->file("berita.$index.img");
+            if ($request->hasFile("beritas.$index.img")) {
+                $file = $request->file("beritas.$index.img");
                 $filename = time() . '_' . $file->getClientOriginalName();
                 $file->move(public_path('assets/img/berita'), $filename);
                 $newData['img'] = $filename;
@@ -117,7 +118,7 @@ private function updateBeritaContent(Request $request)
     }
 
     // handle delete
-    foreach ($request->input('deleteBerita', []) as $id) {
+    foreach ($request->input('deleteBeritas', []) as $id) {
         $item = Berita::find($id);
         if ($item) {
             // hapus gambar juga
