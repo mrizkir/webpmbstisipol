@@ -194,7 +194,7 @@
                     <li><a href="{{ route('downloads') }}">Download</a></li>
 
                     <li>
-                        <a id="daftar" href="https://siakad2.stisipolrajahaji.ac.id/index.php?page=Pendaftaran" target="_blank" onmouseover="this.style.boxShadow='1px 1px 30px #023047';this.style.color='#fff';this.style.border='none';this.querySelector('span').style.visibility='visible';this.querySelector('span').style.transform='scale(100) translateX(2px)';"
+                        <a id="daftar" href="https://portal.stisipolrajahaji.ac.id/index.php?page=Pendaftaran" target="_blank" onmouseover="this.style.boxShadow='1px 1px 30px #023047';this.style.color='#fff';this.style.border='none';this.querySelector('span').style.visibility='visible';this.querySelector('span').style.transform='scale(100) translateX(2px)';"
                             onmouseout="this.style.boxShadow='none';this.style.color='#4e4e4e';this.style.border='2px solid #d5e5e5';this.querySelector('span').style.visibility='hidden';this.querySelector('span').style.transform='scale(1)';">
                             Daftar
                             <span></span>
@@ -222,7 +222,7 @@
                             <h1 class="hero-title" style="font-weight: 600; font-family:Arial; text-transform: uppercase;">{{ optional($heroes->get(0))->content ?? '' }}</h1>
                             <p class="hero-description">{{ optional($heroes->get(1))->content ?? '' }}</p>
                             <div class="hero-actions">
-                                <a href="https://siakad2.stisipolrajahaji.ac.id/index.php?page=Pendaftaran" class="btn-primary">Daftar Sekarang</a>
+                                <a href="https://portal.stisipolrajahaji.ac.id/index.php?page=Pendaftaran" class="btn-primary">Daftar Sekarang</a>
                                 <a href="https://www.youtube.com/watch?v=8cq25CycYn8" class="btn-secondary glightbox">
                                     <i class="bi bi-play-circle"></i>
                                     <span>Tonton Kami</span>
@@ -592,7 +592,7 @@
                             </ul>
 
                             <div class="cta-wrapper">
-                                <a href="https://siakad2.stisipolrajahaji.ac.id/index.php?page=Pendaftaran" class="btn btn-cta">Daftar</a>
+                                <a href="https://portal.stisipolrajahaji.ac.id/index.php?page=Pendaftaran" class="btn btn-cta">Daftar</a>
                             </div>
                         </div>
                     </div>
