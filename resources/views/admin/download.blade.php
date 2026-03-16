@@ -193,7 +193,7 @@
                     <li><a href="#" class="active">Download</a></li>
 
                     <li>
-                        <a id="daftar" href="https://portal.stisipolrajahaji.ac.id/index.php?page=Pendaftaran" target="_blank"
+                        <a id="daftar" href="https://portal.stisipolrajahaji.ac.id/register" target="_blank"
                             onmouseover="this.style.boxShadow='1px 1px 30px #023047';this.style.color='#fff';this.style.border='none';this.querySelector('span').style.visibility='visible';this.querySelector('span').style.transform='scale(100) translateX(2px)';"
                             onmouseout="this.style.boxShadow='none';this.style.color='#4e4e4e';this.style.border='2px solid #d5e5e5';this.querySelector('span').style.visibility='hidden';this.querySelector('span').style.transform='scale(1)';">
                             Daftar
