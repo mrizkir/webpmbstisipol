@@ -76,40 +76,40 @@
 
                                         <div class="col-12">
                                             <p>Edit Hero Title</p>
-                                            <input type="hidden" name="heroes[0][id]" value="{{ $heroes[0]->id }}">
+                                            <input type="hidden" name="heroes[0][id]" value="{{ optional($heroes->get(0))->id ?? '' }}">
                                             <input type="text" name="heroes[0][content]"
-                                                value="{{ $heroes[0]->content }}" class="form-control"
+                                                value="{{ optional($heroes->get(0))->content ?? '' }}" class="form-control"
                                                 placeholder="Penerimaan Mahasiswa Baru 2025/2026" required>
                                         </div>
 
                                         <div class="col-12">
                                             <p>Edit Hero Description</p>
-                                            <input type="hidden" name="heroes[1][id]" value="{{ $heroes[1]->id }}">
+                                            <input type="hidden" name="heroes[1][id]" value="{{ optional($heroes->get(1))->id ?? '' }}">
                                             <textarea name="heroes[1][content]" class="form-control"
-                                                placeholder="STISIPOL Raja Haji Tanjungpinang telah membuka pendaftaran." required>{{ $heroes[1]->content }}</textarea>
+                                                placeholder="STISIPOL Raja Haji Tanjungpinang telah membuka pendaftaran." required>{{ optional($heroes->get(1))->content ?? '' }}</textarea>
                                         </div>
 
                                         <div class="col-12">
                                             <p>Edit Hero Floating Card 1</p>
-                                            <input type="hidden" name="heroes[2][id]" value="{{ $heroes[2]->id }}">
+                                            <input type="hidden" name="heroes[2][id]" value="{{ optional($heroes->get(2))->id ?? '' }}">
                                             <input type="text" name="heroes[2][content]"
-                                                value="{{ $heroes[2]->content }}" class="form-control"
+                                                value="{{ optional($heroes->get(2))->content ?? '' }}" class="form-control"
                                                 placeholder="Administrasi Publik" required>
                                         </div>
 
                                         <div class="col-12">
                                             <p>Edit Hero Floating Card 2</p>
-                                            <input type="hidden" name="heroes[3][id]" value="{{ $heroes[3]->id }}">
+                                            <input type="hidden" name="heroes[3][id]" value="{{ optional($heroes->get(3))->id ?? '' }}">
                                             <input type="text" name="heroes[3][content]"
-                                                value="{{ $heroes[3]->content }}" class="form-control"
+                                                value="{{ optional($heroes->get(3))->content ?? '' }}" class="form-control"
                                                 placeholder="Administrasi Publik" required>
                                         </div>
 
                                         <div class="col-12">
                                             <p>Edit Hero Floating Card 3</p>
-                                            <input type="hidden" name="heroes[4][id]" value="{{ $heroes[4]->id }}">
+                                            <input type="hidden" name="heroes[4][id]" value="{{ optional($heroes->get(4))->id ?? '' }}">
                                             <input type="text" name="heroes[4][content]"
-                                                value="{{ $heroes[4]->content }}" class="form-control"
+                                                value="{{ optional($heroes->get(4))->content ?? '' }}" class="form-control"
                                                 placeholder="Administrasi Publik" required>
                                         </div>
                                         @foreach ($stats as $stat)

@@ -219,8 +219,8 @@
 
                     <div class="col-lg-6 order-2 order-lg-1" data-aos="fade-right" data-aos-delay="200">
                         <div class="hero-content">
-                            <h1 class="hero-title" style="font-weight: 600; font-family:Arial; text-transform: uppercase;">{{ $heroes[0]->content }}</h1>
-                            <p class="hero-description">{{ $heroes[1]->content }}</p>
+                            <h1 class="hero-title" style="font-weight: 600; font-family:Arial; text-transform: uppercase;">{{ optional($heroes->get(0))->content ?? '' }}</h1>
+                            <p class="hero-description">{{ optional($heroes->get(1))->content ?? '' }}</p>
                             <div class="hero-actions">
                                 <a href="https://siakad2.stisipolrajahaji.ac.id/index.php?page=Pendaftaran" class="btn-primary">Daftar Sekarang</a>
                                 <a href="https://www.youtube.com/watch?v=8cq25CycYn8" class="btn-secondary glightbox">
@@ -247,15 +247,15 @@
                                 <div class="floating-elements">
                                     <div class="floating-card card-1">
                                         <i class="bi bi-lightbulb"></i>
-                                        <span>{{ $heroes[2]->content }}</span>
+                                        <span>{{ optional($heroes->get(2))->content ?? '' }}</span>
                                     </div>
                                     <div class="floating-card card-2">
                                         <i class="bi bi-award"></i>
-                                        <span>{{ $heroes[3]->content }}</span>
+                                        <span>{{ optional($heroes->get(3))->content ?? '' }}</span>
                                     </div>
                                     <div class="floating-card card-3">
                                         <i class="bi bi-people"></i>
-                                        <span>{{ $heroes[4]->content }}</span>
+                                        <span>{{ optional($heroes->get(4))->content ?? '' }}</span>
                                     </div>
                                 </div>
                             </div>
@@ -273,8 +273,8 @@
 
             <!-- Section Title -->
             <div class="container section-title" data-aos="fade-up">
-                <span class="description-title">{{ $services[0]->content }}</span>
-                <h2>{{ $services[1]->content }}</h2>
+                <span class="description-title">{{ optional($services->get(0))->content ?? '' }}</span>
+                <h2>{{ optional($services->get(1))->content ?? '' }}</h2>
             </div><!-- End Section Title -->
 
             <div class="container" data-aos="fade-up" data-aos-delay="100">
@@ -284,15 +284,15 @@
                         <div class="intro-content" data-aos="fade-right" data-aos-delay="100">
                             <div class="section-badge mb-3" data-aos="zoom-in" data-aos-delay="50">
                                 <i class="bi bi-star-fill"></i>
-                                <span>{{ $services[2]->content }}</span>
+                                <span>{{ optional($services->get(2))->content ?? '' }}</span>
                             </div>
-                            <h2 class="section-heading mb-4">{{ $services[3]->content }}</h2>
-                            <p class="section-description mb-4" style="text-align: justify">{{ $services[4]->content }}</p>
+                            <h2 class="section-heading mb-4">{{ optional($services->get(3))->content ?? '' }}</h2>
+                            <p class="section-description mb-4" style="text-align: justify">{{ optional($services->get(4))->content ?? '' }}</p>
                         </div>
                     </div>
                     <div class="col-lg-6">
                         <div class="hero-visual" data-aos="fade-left" data-aos-delay="150">
-                            <img src="assets/img/services/{{ $services[5]->content }}" alt="Services" class="img-fluid">
+                            <img src="assets/img/services/{{ optional($services->get(5))->content ?? '' }}" alt="Services" class="img-fluid">
                         </div>
                     </div>
                 </div>
@@ -466,8 +466,8 @@
 
                 <div class="row">
                     <div class="col-lg-8 mx-auto text-center mb-5" data-aos="fade-up" data-aos-delay="200">
-                        <h3 class="main-headline">{{ $statelemens[0]->content }}</h3>
-                        <p class="main-description">{{ $statelemens[1]->content }}</p>
+                        <h3 class="main-headline">{{ optional($statelemens->get(0))->content ?? '' }}</h3>
+                        <p class="main-description">{{ optional($statelemens->get(1))->content ?? '' }}</p>
 
                     </div>
                 </div>
@@ -503,9 +503,9 @@
 
             <!-- Section Title -->
             <div class="container section-title" data-aos="fade-up">
-                <span class="description-title">{{ $pricings[0]->content }}</span>
-                <h2>{{ $pricings[1]->content }}</h2>
-                <p>{{ $pricings[2]->content }}</p>
+                <span class="description-title">{{ optional($pricings->get(0))->content ?? '' }}</span>
+                <h2>{{ optional($pricings->get(1))->content ?? '' }}</h2>
+                <p>{{ optional($pricings->get(2))->content ?? '' }}</p>
             </div><!-- End Section Title -->
 
             <div class="container" data-aos="fade-up" data-aos-delay="100">
@@ -571,15 +571,15 @@
                 <div class="row align-items-lg-center">
                     <div class="col-lg-5 order-lg-2" data-aos="fade-left" data-aos-delay="200">
                         <div class="image-wrapper position-relative">
-                            <img src="assets/img/cta/{{ $ctas[2]->content }}" alt="Security Solutions"
+                            <img src="assets/img/cta/{{ optional($ctas->get(2))->content ?? '' }}" alt="Security Solutions"
                                 class="img-fluid main-image">
                         </div>
                     </div>
 
                     <div class="col-lg-6 offset-lg-1 order-lg-1" data-aos="fade-right" data-aos-delay="100">
                         <div class="content-area">
-                            <h2>{{ $ctas[0]->content }}</h2>
-                            <p>{{ $ctas[1]->content }}
+                            <h2>{{ optional($ctas->get(0))->content ?? '' }}</h2>
+                            <p>{{ optional($ctas->get(1))->content ?? '' }}
                             </p>
 
                             <ul class="feature-list">
@@ -620,10 +620,10 @@
                                     <i class="bi bi-star-fill"></i>
                                     <span>Berita Utama</span>
                                 </div>
-                                <h2 class="section-heading mb-3">{{ $berita[0]->judul }}
+                                <h2 class="section-heading mb-3">{{ optional($berita->get(0))->judul ?? '' }}
                                 </h2>
                                 <p class="section-description mb-4">
-                                    {{ $berita[0]->isi }}
+                                    {{ optional($berita->get(0))->isi ?? '' }}
                                 </p>
                                 <a href="{{ route('berita.index') }}" class="btn-primary">
                                     Baca Selengkapnya
@@ -632,7 +632,7 @@
                         </div>
                         <div class="col-lg-6">
                             <div class="hero-visual" data-aos="fade-left" data-aos-delay="250">
-                                <img src="assets/img/berita/{{ $berita[0]->img }}" alt="Kampus STISIPOL Raja Haji"
+                                <img src="assets/img/berita/{{ optional($berita->get(0))->img ?? '' }}" alt="Kampus STISIPOL Raja Haji"
                                     class="img-fluid rounded-3 shadow">
                             </div>
                         </div>
@@ -677,7 +677,7 @@
                 <div class="row justify-content-center">
 
                     <div class="col-lg-10" data-aos="fade-up" data-aos-delay="100">
-                        <h2><strong>{{ $faqs[0]->title }}</strong></h2>
+                        <h2><strong>{{ optional($faqs->get(0))->title ?? '' }}</strong></h2>
                         <div class="faq-container">
                             @foreach ($faqs->skip(1) as $faq)
                             <div class="faq-item">

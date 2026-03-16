@@ -76,48 +76,48 @@
 
                                         <div class="col-12">
                                             <p>Edit Services Description Title</p>
-                                            <input type="hidden" name="services[0][id]" value="{{ $services[0]->id }}">
-                                            <input type="text" value="{{ $services[0]->content }}"
+                                            <input type="hidden" name="services[0][id]" value="{{ optional($services->get(0))->id ?? '' }}">
+                                            <input type="text" value="{{ optional($services->get(0))->content ?? '' }}"
                                                 name="services[0][content]" class="form-control"
                                                 placeholder="Keunggulan Kami" required="">
                                         </div>
 
                                         <div class="col-12 ">
                                             <p>Edit Services Title</p>
-                                            <input type="hidden" name="services[1][id]" value="{{ $services[1]->id }}">
-                                            <input type="text" value="{{ $services[1]->content }}"
+                                            <input type="hidden" name="services[1][id]" value="{{ optional($services->get(1))->id ?? '' }}">
+                                            <input type="text" value="{{ optional($services->get(1))->content ?? '' }}"
                                                 class="form-control" name="services[1][content]"
                                                 placeholder="Keunggulan Kami" required="">
                                         </div>
 
                                         <div class="col-12 ">
                                             <p>Edit Services Section Badge</p>
-                                            <input type="hidden" name="services[2][id]" value="{{ $services[2]->id }}">
-                                            <input type="text" value="{{ $services[2]->content }}"
+                                            <input type="hidden" name="services[2][id]" value="{{ optional($services->get(2))->id ?? '' }}">
+                                            <input type="text" value="{{ optional($services->get(2))->content ?? '' }}"
                                                 class="form-control" name="services[2][content]"
                                                 placeholder="Tentang Kami" required="">
                                         </div>
                                         <div class="col-12 ">
                                             <p>Edit Services Section Heading </p>
-                                            <input type="hidden" name="services[3][id]" value="{{ $services[3]->id }}">
-                                            <input type="text" value="{{ $services[3]->content }}"
+                                            <input type="hidden" name="services[3][id]" value="{{ optional($services->get(3))->id ?? '' }}">
+                                            <input type="text" value="{{ optional($services->get(3))->content ?? '' }}"
                                                 class="form-control" name="services[3][content]"
                                                 placeholder="Keunggulan Kami" required="">
                                         </div>
                                         <div class="col-12 ">
                                             <p>Edit Services Section Description</p>
                                             <input type="hidden" name="services[4][id]"
-                                                value="{{ $services[4]->id }}">
-                                            <input type="text" value="{{ $services[4]->content }}"
+                                                value="{{ optional($services->get(4))->id ?? '' }}">
+                                            <input type="text" value="{{ optional($services->get(4))->content ?? '' }}"
                                                 class="form-control" name="services[4][content]"
                                                 placeholder="Kampus STISIPOL Raja Haji Tanjungpinang di lokasi strategi serta Berkualitas, Biaya Terjangkau, Beasiswa Tersedia, Inovatif & Berorientasi Sosial."
                                                 required="">
                                         </div>
                                         <div class="col-12 ">
                                             <p>Edit Services Visual</p>
-                                            <input type="hidden" name="img_services_id" value="{{ $services[5]->id }}">
+                                            <input type="hidden" name="img_services_id" value="{{ optional($services->get(5))->id ?? '' }}">
                                             <input type="file"
-                                                value="{{ asset('/assets/img/services/' . $services[5]->content) }}"
+                                                value="{{ asset('/assets/img/services/' . (optional($services->get(5))->content ?? '')) }}"
                                                 class="form-control" name="img_services_visual"
                                                 placeholder="Mahasiswa Aktif">
                                         </div>
